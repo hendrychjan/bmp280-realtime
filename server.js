@@ -48,5 +48,5 @@ sensor.begin((err) => {
         live.emit("temperature", temperature);
       }
     });
-  }, 200);
+  }, 100);
 });

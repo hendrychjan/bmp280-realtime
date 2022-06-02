@@ -10,9 +10,9 @@ npm i
 
 # Edit the client page to match the raspberry pi's IP address
 echo "[INSTALLER]: ...editing client page"
-echo "Tell me the Raspberry Pi's IP address:"
+echo -n "Tell me the Raspberry Pi's IP address:"
 read ip
-sed -i "15 i const url = \"$ip\";" client.html
+sed -i "34 i const url = \"http://$ip:3008/live\";" client.html
 
 # The installation is complete
 echo "[INSTALLER]: ...installation complete! Start with 'node server.js'"

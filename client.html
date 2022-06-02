@@ -7,16 +7,34 @@
       crossorigin="anonymous"
     ></script>
     <title>Reciever</title>
+    <style>
+      body {
+              margin: 0;
+              padding: 0;
+              border: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              width: 100vw;
+              background-color: #0c89c4;
+            }
+
+            p {
+              color: white;
+              font-size: xx-large;
+              font-weight: bold;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+    </style>
   </head>
   <body>
-    <h1>Your messages are here</h1>
-    <h2 id="msgBox"></h2>
+    <p id="status"></p>
     <script>
-const url = "asd";
-      const msgBox = document.getElementById("msgBox");
+      const statusBox = document.getElementById("status");
       const socket = io.connect(url);
       socket.on("temperature", (data) => {
-        msgBox.innerHTML += data + "<br/>";
+        statusBox.innerHTML = data + " ˚C";
       });
     </script>
   </body>
