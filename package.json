@@ -1,0 +1,25 @@
+{
+  "name": "bmp280-realtime-server",
+  "version": "1.0.0",
+  "description": "A socket.io server for bmp280",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hendrychjan/bmp280-realtime.git"
+  },
+  "author": "Jan Hendrych",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hendrychjan/bmp280-realtime/issues"
+  },
+  "homepage": "https://github.com/hendrychjan/bmp280-realtime#readme",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "express": "^4.18.1",
+    "node-bmp280": "^0.1.2",
+    "socket.io": "^4.5.1"
+  }
+}

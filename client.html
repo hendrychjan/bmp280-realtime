@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"
+      integrity="sha512–74AKPNm8Tfd5E9c4otg7XNkIVfIe5ynON7wehpX/9Tv5VYcZvXZBAlcgOAjLHg6HeWyLujisAnle6+iKnyWd9Q=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Reciever</title>
+  </head>
+  <body>
+    <h1>Your messages are here</h1>
+    <h2 id="msgBox"></h2>
+    <script>
+const url = "asd";
+      const msgBox = document.getElementById("msgBox");
+      const socket = io.connect(url);
+      socket.on("temperature", (data) => {
+        msgBox.innerHTML += data + "<br/>";
+      });
+    </script>
+  </body>
+</html>
