@@ -37,7 +37,7 @@ sensor.begin((err) => {
 
   console.log("BMP280 sensor initialized");
 
-  // Start the measuring (update every 100ms)
+  // Start the measuring (update every second)
   setInterval(() => {
     // Read the values
     sensor.readPressureAndTemparature((err, pressure, temperature) => {
@@ -45,8 +45,9 @@ sensor.begin((err) => {
         console.log(err);
       } else {
         // Send the update to all connected clients
-        live.emit("temperature", temperature);
+        let payload = Math.round(temperature * 10) / 10;
+        live.emit("temperature", payload.toFixed(1));
       }
     });
-  }, 100);
+  }, 1000);
 });
